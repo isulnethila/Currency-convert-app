@@ -7,7 +7,7 @@ export default function App() {
 
   const converttousd=()=>{
     const rate=0.003;
-    const converte=(parseFloat(lkr)*rate);
+    const converte=(parseFloat(lkr)*rate).toFixed(2);
     setusd(converte);
   }
 
@@ -22,6 +22,7 @@ export default function App() {
     />
 
     <Button title='convert' onPress={converttousd} />
+    {usd ? <Text style={styles.result}>USD: {usd}$</Text> : null}
     </View>
   );
 }
@@ -47,5 +48,11 @@ const styles = StyleSheet.create({
     paddingHorizontal:10,
     marginBottom:20,
 
+  },
+  result:{
+    fontSize:25,
+    color:'balck',
+    marginTop:20
   }
+
 });
