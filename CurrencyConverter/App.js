@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,TextInput } from 'react-native';
+import { StyleSheet, Text, View,TextInput,Button } from 'react-native';
 import { useState } from 'react';
 export default function App() {
   const[lkr,setlkr]=useState('');
@@ -20,6 +20,8 @@ export default function App() {
       value={lkr}
       onChangeText={setlkr}
     />
+
+    <Button title='convert' onPress={converttousd} />
     </View>
   );
 }
