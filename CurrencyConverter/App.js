@@ -3,6 +3,13 @@ import { StyleSheet, Text, View,TextInput } from 'react-native';
 import { useState } from 'react';
 export default function App() {
   const[lkr,setlkr]=useState('');
+  const[usd,setusd]=useState('');
+
+  const converttousd=()=>{
+    const rate=0.003;
+    const converte=(parseFloat(lkr)*rate);
+    setusd(converte);
+  }
 
   return (
     <View style={styles.container}>
